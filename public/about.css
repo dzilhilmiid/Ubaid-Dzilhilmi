@@ -1,0 +1,287 @@
+/* ================= ABOUT SECTION ================= */
+
+.about {
+    min-height: 100vh;
+    padding: 140px 8vw 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* BOX GENERAL */
+.about-box {
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: border-color .3s ease, transform .3s ease;
+}
+
+.about-box:hover {
+    border-color: #00abf0;
+    transform: translateY(-2px);
+}
+
+/* ================= HEADER ================= */
+
+.about-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00abf0;
+}
+
+/* ================= ABSTRACT ================= */
+
+.about-abstract {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.about-abstract p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ================= EDUCATION ================= */
+
+.about-education {
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.about-education h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.education-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education-list li {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.education-list strong {
+    color: #00abf0;
+    font-weight: 600;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.about-experience {
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.about-experience h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.experience-group {
+    margin-bottom: 30px;
+}
+
+.experience-group h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ededed;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.experience-list strong {
+    color: #00abf0;
+    font-weight: 600;
+}
+
+/* ================= SKILLS ================= */
+
+.about-skills {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.about-skills h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skills-box {
+    padding: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    transition: border-color .3s ease;
+}
+
+.skills-box:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    justify-self: center;
+}
+
+.skills-box:hover {
+    border-color: #00abf0;
+}
+
+.skills-box h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #00abf0;
+}
+
+.skills-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-box ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* ================= WORK APPROACH ================= */
+
+.about-approach {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-approach h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.about-approach p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ================= ABOUT ACTION BUTTONS ================= */
+.about-actions {
+    display: flex;           /* KUNCI UTAMA */
+    gap: 16px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+/* shared style */
+.about-scroll-btn,
+.about-back-btn {
+    height: 50px;
+    min-width: 180px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .4s;
+}
+
+/* Scroll button */
+.about-scroll-btn {
+    border: 2px solid #ededed;
+    background: #00abf0;
+    color: #081b29;
+}
+
+.about-scroll-btn:hover {
+    border: 2px solid #00abf0;
+    background: #081b29;
+    color: #ededed;
+}
+
+/* Back Home button */
+.about-back-btn {
+    text-decoration: none;
+    border: 2px solid #ededed;
+    background: #00abf0;
+    color: #081b29;
+}
+
+.about-back-btn:hover {
+    border: 2px solid #00abf0;
+    background: #081b29;
+    color: #ededed;
+}
+
+.about-scroll-btn:active,
+.about-back-btn:active {
+    transform: scale(.96);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    .about {
+        padding: 120px 6vw 60px;
+    }
+
+    .about-header h1 {
+        font-size: 32px;
+    }
+
+    .about-header h3 {
+        font-size: 18px;
+    }
+
+    .about-abstract p,
+    .about-approach p {
+        font-size: 15px;
+    }
+
+    .about-experience h3,
+    .about-skills h3,
+    .about-approach h3 {
+        font-size: 22px;
+    }
+
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-box:last-child:nth-child(odd) {
+        grid-column: auto;       /* reset */
+        justify-self: stretch;   /* SAMA ukuran */
+    }
+
+     .about-actions {
+        flex-direction: column;
+        gap: 15px;
+  }
+}

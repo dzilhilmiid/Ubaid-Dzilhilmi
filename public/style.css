@@ -1,0 +1,38 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #081b29;
+    color: #ededed;
+}
+
+.main {
+    flex: 1;
+    display: block;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+    .footer-sci a {
+        padding: 10px 14px;
+    }
+
+    .footer-sci a i {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .sci-name {
+        font-size: 13px;
+    }
+} 
