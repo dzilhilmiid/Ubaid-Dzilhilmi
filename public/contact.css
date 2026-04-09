@@ -1,3 +1,18 @@
+:root {
+  --primary: #00abf0;
+  --secondary: #00f5a0;
+  --dark: #081b29;
+  --card: #0f2a3a;
+  --text: #ededed;
+  --muted: #aaa;
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
 /* ================= CONTACT ================= */
 .contact {
     min-height: 100vh;
