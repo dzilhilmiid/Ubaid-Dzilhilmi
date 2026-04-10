@@ -59,7 +59,7 @@
 
 .btn-back,
 .btn-send {
-    flex: 1;                
+    flex: 1;                 /* KUNCI UTAMA */
     height: 50px;
     width: 100%;
     border-radius: 8px;

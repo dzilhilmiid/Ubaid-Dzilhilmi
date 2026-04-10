@@ -1,20 +1,153 @@
-/* ================= PROJECT PAGE ================= */
+/* ================= ROOT ================= */
+:root {
+  --primary: #00abf0;
+  --secondary: #00f5a0;
+  --dark: #081b29;
+  --card: #0f2a3a;
+  --text: #ededed;
+  --muted: #aaa;
+}
 
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ================= HAMBURGER ================= */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: var(--text);
+  background: var(--card);
+  padding: 8px 10px;
+  border-radius: 8px;
+  z-index: 1100;
+  cursor: pointer;
+  display: none;
+}
+
+/* ================= SIDEBAR (DESKTOP) ================= */
+.sidebar-full {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+/* ================= SCROLL AREA ================= */
+.story-menu {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  padding: 20px 0;
+
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+.story-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.story-menu::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.scroll-btn {
+  display: none;
+}
+
+/* ================= CARD ================= */
+.story-item {
+  width: 80%;
+  min-height: 90px;
+  background: var(--card);
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px 20px;
+
+  text-decoration: none;
+  color: var(--muted);
+
+  transition: all 0.3s ease;
+
+  transform: scale(0.85);
+  opacity: 0.6;
+}
+
+.story-item i {
+  font-size: 26px;
+}
+
+.story-item span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.story-item:hover {
+  transform: scale(1);
+  opacity: 1;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--dark);
+  box-shadow: 0 0 15px rgba(0,171,240,0.6);
+}
+
+.story-item.active {
+  transform: scale(1.1);
+  opacity: 1;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--dark);
+  box-shadow: 0 0 20px rgba(0,171,240,0.8);
+}
+
+/* ================= PROJECT PAGE ================= */
 .page-project {
-  background: #081b29;
+  background: var(--dark);
 }
 
 /* ================= PAGE WRAPPER ================= */
-
 .page {
-  min-height: 100vh;
-  padding: 140px 8vw 80px;
   max-width: 1200px;
-  margin: 0 auto;
+  padding: 170px 10% 60px;
+  padding-right: 110px;
 }
 
 /* ================= HEADER ================= */
-
 .page-header {
   text-align: center;
   margin-bottom: 60px;
@@ -29,7 +162,7 @@
 .page-header h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #00abf0;
+  color: var(--primary);
   margin-bottom: 15px;
 }
 
@@ -42,14 +175,12 @@
 }
 
 /* ================= CONTENT ================= */
-
 .page-body {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 /* ================= PROJECT GRID ================= */
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -57,7 +188,6 @@
 }
 
 /* ================= PROJECT CARD ================= */
-
 .project-card {
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
@@ -71,7 +201,6 @@
 }
 
 /* ================= PROJECT HEADER ================= */
-
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -85,7 +214,6 @@
 }
 
 /* ================= BADGE ================= */
-
 .project-badge {
   font-size: 12px;
   padding: 5px 12px;
@@ -104,7 +232,6 @@
 }
 
 /* ================= DESCRIPTION ================= */
-
 .project-desc {
   font-size: 15px;
   line-height: 1.7;
@@ -113,7 +240,6 @@
 }
 
 /* ================= ACTIONS ================= */
-
 .project-actions {
   display: flex;
   gap: 15px;
@@ -137,50 +263,142 @@
 .project-link:hover {
   background: #00abf0;
   color: #081b29;
-  border-color: #00abf0;
+  border-color: #ededed;
 }
 
 .project-link.demo {
   border-color: #00abf0;
 }
 
-/* ================= BACK BUTTON ================= */
-
-.project-back {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.back-home-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border: 2px solid #00abf0;
-    border-radius: 30px;
-    color: #ededed;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all .3s ease;
-}
-
-.back-home-btn:hover {
-    background: #00abf0;
-    color: #081b29;
-    border-color: #ededed;
-    transform: translateY(-2px);
-}
-
 /* ================= MOBILE ================= */
+@media (max-width: 768px) {
 
-@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* UBAH JADI BOTTOM NAV */
+  .sidebar-full {
+    transform: translateY(100%);
+    transition: 0.3s ease;
+  }
+
+  /* kalau aktif */
+  .sidebar-full.active {
+    transform: translateY(0);
+  }
+  
+  .sidebar-full {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 65px;
+    padding: 0 5px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(10px);
+    background: rgba(8, 27, 41, 0.85);
+  }
+
+  .story-menu {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 40px;
+    gap: 6px;
+
+    scroll-behavior: smooth;
+  }
+
+  .story-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .story-item {
+    width: 100px;
+    aspect-ratio: 1 / 1; 
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 5px;
+    border-radius: 10px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .story-item i {
+    font-size: 18px;
+  }
+
+  .story-item span {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+/* ================= SCROLL BUTTON (FIXED) ================= */
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--card);
+    color: var(--text);
+
+    border-radius: 50%;
+    font-size: 18px;
+
+    cursor: pointer;
+    z-index: 10;
+
+    opacity: 0.9;
+    transition: 0.3s;
+  }
+
+  .scroll-btn.left {
+    left: 10px;
+  }
+
+  .scroll-btn.right {
+    right: 10px;
+  }
+
+  .scroll-btn:hover {
+    opacity: 1;
+    background: var(--primary);
+    color: var(--text);
+  }
+
+  /*  biar tidak ketutup navbar bawah */
+  .page {
+    padding: 150px 6vw 90px;
+  }
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .page {
-    padding: 120px 6vw 60px;
   }
 
   .page-header h1 {

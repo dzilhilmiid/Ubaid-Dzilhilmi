@@ -42,18 +42,27 @@ if (form) {
   });
 }
 
-/* ====== SCROLL TO TOP BUTTON ===== */
-const aboutScroll = document.getElementById("aboutScroll");
+const toggle = document.getElementById('menu-toggle');
+const sidebar = document.querySelector('.sidebar-full');
 
-if (aboutScroll) {
-  window.addEventListener("scroll", () => {
-    aboutScroll.style.display = window.scrollY > 300 ? "block" : "none";
-  });
+toggle.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
 
-  aboutScroll.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+function scrollMenu(amount) {
+  const menu = document.querySelector(".story-menu");
+  menu.scrollBy({
+    left: amount,
+    behavior: "smooth"
   });
 }
+
+const skillBtns = document.querySelectorAll(".skill-btn");
+
+skillBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const parent = btn.parentElement;
+
+    parent.classList.toggle("active");
+  });
+});

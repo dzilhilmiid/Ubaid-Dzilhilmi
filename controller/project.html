@@ -2,23 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects | Ubaid Dzilhilmi</title>
+  <title>Ubaid Dzilhilmi | Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../public/style.css">
-  <link rel="stylesheet" href="../public/index.css">
-  <link rel="stylesheet" href="../public/about.css">
-  <link rel="stylesheet" href="../public/contact.css">
   <link rel="stylesheet" href="../public/project.css">
 
   <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
-<body class="page-project">
+<body>
+   <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class='bx bx-menu'></i>
+  </div>
 
-  <!-- PROJECT PAGE -->
+  <!-- SIDEBAR -->
+  <nav class="sidebar-full">
+    <!-- Tombol Scrooll-->
+     <div class="scroll-btn left" onclick="scrollMenu(-150)">
+        <i class='bx bx-chevron-left'></i>
+      </div>
+      
+      <div class="scroll-btn right" onclick="scrollMenu(150)">
+        <i class='bx bx-chevron-right'></i>
+      </div>
+
+    <div class="story-menu">
+
+      <a href="../index.html" class="story-item">
+        <i class='bx bx-home'></i>
+        <span>Home</span>
+      </a>
+
+      <a href="./about.html" class="story-item">
+        <i class='bx bx-user'></i>
+        <span>About Me</span>
+      </a>
+
+      <a href="./education.html" class="story-item">
+        <i class='bx bx-book'></i>
+        <span>Education</span>
+      </a>
+
+      <a href="organization.html" class="story-item">
+        <i class='bx bx-group'></i>
+        <span>Organization</span>
+      </a>
+
+      <a href="experience.html" class="story-item">
+        <i class='bx bx-briefcase'></i>
+        <span>Experience</span>
+      </a>
+
+      <a href="skill.html" class="story-item">
+        <i class='bx bx-cog'></i>
+        <span>Skills</span>
+      </a>
+
+      <a href="project.html" class="story-item">
+        <i class='bx bx-folder'></i>
+        <span>Projects</span>
+      </a>
+
+      <a href="#resume" class="story-item">
+        <i class='bx bx-file'></i>
+        <span>Resume</span>
+      </a>
+
+      <a href="faq.html" class="story-item">
+        <i class='bx bx-help-circle'></i>
+        <span>FAQ</span>
+      </a>
+
+      <a href="contact.html" class="story-item">
+        <i class='bx bx-envelope'></i>
+        <span>Contact</span>
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- SECTION -->
   <section class="page">
 
     <!-- HEADER -->
@@ -90,8 +157,8 @@
         <!-- PROJECT 3 -->
         <div class="project-card">
           <div class="project-header">
-            <h4>Production Process Analysis</h4>
-            <span class="project-badge ongoing">In Progress</span>          
+            <h4>Production Analysist System</h4>
+            <span class="project-badge ongoing">Continuing</span>          
           </div>
 
           <p class="project-desc">
@@ -132,11 +199,30 @@
         <div class="project-card">
           <div class="project-header">
             <h4>Point of Sales</h4>
-            <span class="project-badge completed">Completed</span>          
+            <span class="project-badge ongoing">Continuing</span>          
           </div>
 
           <p class="project-desc">
-            A web-based Point of Sales (POS) application designed to manage bread product distribution for sales members. Developed using HTML, CSS, JavaScript, Node.js, Express.js, and MySQL, the system supports product listing, member-based transactions, and simple sales records. This project demonstrates practical implementation of full-stack web development, database integration, and structured application workflow using Git for version control.          
+            A web-based Point of Sales (POS) application for managing bread distribution to sales members. Built with HTML, CSS, JavaScript, Node.js, Express.js, and MySQL, featuring product listing, member transactions, and basic sales records. Demonstrates full-stack development, database integration, and version control using Git.          
+          </p>
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/latihan-24"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h4>My Gudang</h4>
+            <span class="project-badge ongoing">Continuing</span>          
+          </div>
+
+          <p class="project-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod totam voluptatibus molestias? Necessitatibus, reiciendis veritatis dignissimos aliquid iure itaque voluptates repellat laboriosam exercitationem, nesciunt id voluptate blanditiis odio corporis.          
           </p>
           <div class="project-actions">
             <a href="https://github.com/dzilhilmiid/latihan-24"
@@ -151,12 +237,8 @@
 
     </div>
 
-    <div class="project-back">
-      <a href="../index.html" class="back-home-btn">Back to Home</a>
-    </div>
-
   </section>
 
-<script src="/js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

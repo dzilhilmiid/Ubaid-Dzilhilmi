@@ -137,7 +137,7 @@ body {
 
 /* ================= HOME ================= */
 .home {
-  padding: 260px 10% 60px;
+  padding: 170px 10% 60px;
   padding-right: 110px;
 }
 
@@ -370,7 +370,7 @@ body {
 
   /* 🔥 biar tidak ketutup navbar bawah */
   .home {
-    padding: 260px 6vw 90px;
+    padding: 170px 6vw 90px;
   }
 
 }
