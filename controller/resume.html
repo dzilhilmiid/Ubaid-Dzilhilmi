@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ubaid Dzilhilmi | Portfolio</title>
+  <title>Ubaid Dzilhilmi | Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./public/index.css">
-
+  <link rel="stylesheet" href="../public/resume.css">
+  
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
@@ -29,7 +29,7 @@
       
     <div class="story-menu">
 
-      <a href="#home" class="story-item">
+      <a href="../index.html" class="story-item">
         <i class='bx bx-home'></i>
         <span>Home</span>
       </a>
@@ -39,43 +39,42 @@
         <span>About Me</span>
       </a>
 
-      <a href="./controller/education.html" class="story-item">
+      <a href="./education.html" class="story-item">
         <i class='bx bx-book'></i>
         <span>Education</span>
       </a>
 
-      <a href="./controller/organization.html" class="story-item">
+      <a href="./organization" class="story-item">
         <i class='bx bx-group'></i>
         <span>Organization</span>
       </a>
 
-      <a href="./controller/experience.html" class="story-item">
+      <a href="./experience.html" class="story-item">
         <i class='bx bx-briefcase'></i>
         <span>Experience</span>
       </a>
 
-      <a href="./controller/skill.html" class="story-item">
+      <a href="./skill.html" class="story-item">
         <i class='bx bx-cog'></i>
         <span>Skills</span>
       </a>
 
-      <a href="./controller/project.html" class="story-item">
+      <a href="./project.html" class="story-item">
         <i class='bx bx-folder'></i>
         <span>Projects</span>
       </a>
 
-
-      <a href="./controller/resume.html" class="story-item">
+      <a href="./resume.html" class="story-item active">
         <i class='bx bx-file'></i>
         <span>Resume</span>
       </a>
 
-      <a href="./controller/faq.html" class="story-item">
+      <a href="./faq.html" class="story-item">
         <i class='bx bx-help-circle'></i>
         <span>FAQ</span>
       </a>
 
-      <a href="./controller/contact.html" class="story-item">
+      <a href="./contact.html" class="story-item">
         <i class='bx bx-envelope'></i>
         <span>Contact</span>
       </a>
@@ -88,29 +87,40 @@
     <div class="section-wrapper">
       <div class="home-content">
 
-        <h1>Hi, I'm <span>Ubaid Dzilhilmi</span></h1>
-        <h3>Welcome to My Portfolio Website</h3>
+        <h1>My Resume</h1>
+        <h3>
+          View or Download My Resume
+        </h3>
 
         <p>
-          I am a graduate of Agroindustrial Technology with a strong foundation in
-          management, quality control, product development, and logistics.
-          I use technology and web-based solutions to improve efficiency,
-          optimize processes, and support business decision-making.
+          You can view my complete resume below or download it for more details about my education, skills, and experience.
         </p>
-
-        <div class="home-btn">
-          <a href="./controller/contact.html">Contact Me</a>
-          <a href="./controller/about.html">About Me</a>
-          <a href="./controller/project.html">My Projects</a>
+        
+        <div class="resume-wrapper">
+          <div class="home-btn">
+            <a href="#" id="viewBtn">
+              <i class='bx bx-show'></i>
+              View Resume
+            </a>
+            
+            <a href="../source/Ubaid Dzilhilmi_Resume.pdf" target="_blank">
+              <i class='bx bx-download'></i>
+              Download Resume
+            </a>
+          </div>
+          
+          <!-- CV VIEWER-->
+          <div class="cv-frame" id="cvFrame" style="display: none;">
+            <iframe src="../source/Ubaid Dzilhilmi_Resume.pdf"></iframe>
+          </div>
         </div>
-
       </div>
     </div>
 
   </section>
 
   <!-- JS -->
-  <script src="./js/main.js"></script>
+  <script src="../js/main.js"></script>
 
 </body>
 </html>

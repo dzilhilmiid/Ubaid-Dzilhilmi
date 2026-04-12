@@ -42,6 +42,7 @@ if (form) {
   });
 }
 
+/* ==== SIDEBAR MENU =====*/
 const toggle = document.getElementById('menu-toggle');
 const sidebar = document.querySelector('.sidebar-full');
 
@@ -57,6 +58,7 @@ function scrollMenu(amount) {
   });
 }
 
+/* ==== SKILLS BUTTON =====*/
 const skillBtns = document.querySelectorAll(".skill-btn");
 
 skillBtns.forEach(btn => {
@@ -65,4 +67,20 @@ skillBtns.forEach(btn => {
 
     parent.classList.toggle("active");
   });
+});
+
+/* ==== IFRAME CV =====*/
+const viewBtn = document.getElementById("viewBtn");
+const cvFrame = document.getElementById("cvFrame");
+
+viewBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  if (cvFrame.style.display === "none") {
+    cvFrame.style.display = "block";
+    viewBtn.innerHTML = "<i class='bx bx-hide'></i> Hide Resume";
+  } else {
+    cvFrame.style.display = "none";
+    viewBtn.innerHTML = "<i class='bx bx-show'></i> View Resume";
+  }
 });
