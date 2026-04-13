@@ -7,37 +7,37 @@
   --muted: #aaa;
 }
 
-/* ================= CONTACT ================= */
 body {
   background: var(--dark);
   color: var(--text);
   overflow-x: hidden;
 }
 
+/* ================= CONTACT ================= */
 .contact {
-    min-height: 100vh;
-    padding: 120px 6vw 60px;
+    padding: 50px 5% 50px;
 }
 
 .contact-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 /* ================= HEADER ================= */
 .contact-header {
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact-header h1 {
-    font-size: 42px;
-    font-weight: 700;
     margin-bottom: 10px;
 }
 
+.contact-header h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ededed;
+}
+
 .contact-header h3 {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 600;
     color: #00abf0;
 }
@@ -45,13 +45,14 @@ body {
 /* ================= FORM ================= */
 .contact-form {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 700px;
     padding: 12px 14px;
     background: transparent;
     border: 2px solid #00abf0;
@@ -68,13 +69,13 @@ body {
 /* ================= ACTION BUTTONS ================= */
 .contact-actions {
     display: flex;
-    gap: 16px;
+    gap: 10px;
     margin-top: 25px;
 }
 
 .btn-back,
 .btn-send {
-    flex: 1;                 /* KUNCI UTAMA */
+    flex: 1;                
     height: 50px;
     width: 100%;
     border-radius: 8px;
@@ -84,15 +85,15 @@ body {
 }
 
 /* Back to Home */
-.btn-back {
+.btn-back, 
+.btn-send {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
+    width: 350px;
     height: 50px;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
     text-decoration: none;
     border: 2px solid #ededed;
     background: #00abf0;
@@ -106,23 +107,6 @@ body {
     color: #ededed;
 }
 
-/* Send Button */
-.btn-send {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    height: 50px;
-    padding: 0 28px;
-    border: 2px solid #ededed;
-    background: #00abf0;
-    color: #081b29;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: .4s;
-}
-
 .btn-send:hover {
     border: 2px solid #00abf0;
     background: #081b29;
@@ -131,15 +115,15 @@ body {
 
 .btn-send:active {
     transform: scale(.96);
-}
+}               
 
 /* ================= FOOTER SOCIAL ================= */
 .footer-sci {
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -155,25 +139,28 @@ body {
     white-space: nowrap;
     transition: .3s;
     cursor: default;
+    width: 150px;
+    justify-content: center;
+    
 }
 
 /* icon */
 .footer-sci a i {
-    width: 40px;
-    height: 40px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    border: 2px solid #00abf0;
+    border: 1px solid #00abf0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 10px;
     color: #00abf0;
     transition: .3s;
 }
 
 /* text */
 .sci-name {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* hover */
@@ -196,7 +183,7 @@ body {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
     .contact {
-        padding: 100px 6% 50px;
+        padding: 60px 5% 40px;
     }
 
     .contact-header h1 {
@@ -204,23 +191,18 @@ body {
     }
 
     .contact-header h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    /* tombol turun */
     .contact-actions {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 10px;
     }
 
-    .btn-back,
-    .btn-send {
-        width: 100%;
-    }
-
-    /* footer jadi kolom */
     .footer-sci {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
     .footer-sci a {

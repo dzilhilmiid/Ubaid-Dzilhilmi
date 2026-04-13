@@ -46,9 +46,11 @@ if (form) {
 const toggle = document.getElementById('menu-toggle');
 const sidebar = document.querySelector('.sidebar-full');
 
-toggle.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-});
+if (toggle && sidebar) {
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+}
 
 function scrollMenu(amount) {
   const menu = document.querySelector(".story-menu");
@@ -73,14 +75,16 @@ skillBtns.forEach(btn => {
 const viewBtn = document.getElementById("viewBtn");
 const cvFrame = document.getElementById("cvFrame");
 
-viewBtn.addEventListener("click", function(e) {
-  e.preventDefault();
+if (viewBtn && cvFrame) {
+  viewBtn.addEventListener("click", function(e) {
+    e.preventDefault();
 
-  if (cvFrame.style.display === "none") {
-    cvFrame.style.display = "block";
-    viewBtn.innerHTML = "<i class='bx bx-hide'></i> Hide Resume";
-  } else {
-    cvFrame.style.display = "none";
-    viewBtn.innerHTML = "<i class='bx bx-show'></i> View Resume";
-  }
-});
+    if (cvFrame.style.display === "none") {
+      cvFrame.style.display = "block";
+      viewBtn.innerHTML = "<i class='bx bx-hide'></i> Hide Resume";
+    } else {
+      cvFrame.style.display = "none";
+      viewBtn.innerHTML = "<i class='bx bx-show'></i> View Resume";
+    }
+  });
+}
