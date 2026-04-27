@@ -1,90 +1,69 @@
-/* ==== CONTACT FORM VALIDATION =====*/
-const form = document.querySelector(".contact-form");
+// Searchbox
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // ⬅️ STOP redirect
+searchBtn.addEventListener("click", handleSearch);
+searchInput.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
+});
 
-    const status = form.querySelector(".form-status");
-    const btn = form.querySelector(".btn-send");
+function handleSearch() {
+  const keyword = searchInput.value.toLowerCase().trim();
 
-    const data = new FormData(form);
+  if (!keyword) return;
 
-    btn.disabled = true;
-    btn.innerText = "Sending...";
+  const sections = document.querySelectorAll("section:not(#home)");
 
-    fetch("https://formspree.io/f/xojwjwqy", {
-      method: "POST",
-      body: data,
-      headers: {
-        "Accept": "application/json"
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        status.style.display = "block";
-        status.style.color = "white";
-        status.innerText = "Message sent successfully. Thank you!";
-        form.reset();
-      } else {
-        throw new Error("Form failed to submit");
-      }
-    })
-    .catch(() => {
-      status.style.display = "block";
-      status.style.color = "red";
-      status.innerText = "Oops! Something went wrong. Try again.";
-    })
-    .finally(() => {
-      btn.disabled = false;
-      btn.innerText = "Send Message";
-    });
+  let found = false;
+
+  sections.forEach(section => {
+    const text = section.innerText.toLowerCase();
+
+    if (text.includes(keyword) && !found) {
+      section.scrollIntoView({ behavior: "smooth" });
+      found = true;
+    }
   });
+
+  if (!found) {
+    alert("Data tidak ditemukan");
+  }
 }
 
-/* ==== SIDEBAR MENU =====*/
-const toggle = document.getElementById('menu-toggle');
-const sidebar = document.querySelector('.sidebar-full');
+// Skill
+const skillItems = document.querySelectorAll(".skill-item");
 
-if (toggle && sidebar) {
-  toggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-  });
-}
+skillItems.forEach(item => {
+  const btn = item.querySelector(".skill-btn");
 
-function scrollMenu(amount) {
-  const menu = document.querySelector(".story-menu");
-  menu.scrollBy({
-    left: amount,
-    behavior: "smooth"
-  });
-}
-
-/* ==== SKILLS BUTTON =====*/
-const skillBtns = document.querySelectorAll(".skill-btn");
-
-skillBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    const parent = btn.parentElement;
 
-    parent.classList.toggle("active");
+    skillItems.forEach(el => {
+      if (el !== item) {
+        el.classList.remove("active");
+      }
+    });
+
+    item.classList.toggle("active");
   });
 });
 
-/* ==== IFRAME CV =====*/
-const viewBtn = document.getElementById("viewBtn");
-const cvFrame = document.getElementById("cvFrame");
+// Resume
+document.addEventListener("DOMContentLoaded", function () {
+  const viewBtn = document.getElementById("viewBtn");
+  const cvFrame = document.getElementById("cvFrame");
 
-if (viewBtn && cvFrame) {
-  viewBtn.addEventListener("click", function(e) {
+  viewBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
-    if (cvFrame.style.display === "none") {
-      cvFrame.style.display = "block";
+    cvFrame.classList.toggle("active");
+
+    if (cvFrame.classList.contains("active")) {
       viewBtn.innerHTML = "<i class='bx bx-hide'></i> Hide Resume";
     } else {
-      cvFrame.style.display = "none";
       viewBtn.innerHTML = "<i class='bx bx-show'></i> View Resume";
     }
   });
-}
+});

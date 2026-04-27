@@ -4,113 +4,531 @@
   <meta charset="UTF-8">
   <title>Ubaid Dzilhilmi | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="./public/index.css">
-
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class='bx bx-menu'></i>
-  </div>
-
-  <!-- SIDEBAR -->
-  <nav class="sidebar-full">
-    <!-- Tombol Scrooll-->
-     <div class="scroll-btn left" onclick="scrollMenu(-150)">
-        <i class='bx bx-chevron-left'></i>
-      </div>
-      
-      <div class="scroll-btn right" onclick="scrollMenu(150)">
-        <i class='bx bx-chevron-right'></i>
-      </div>
-      
-    <div class="story-menu">
-
-      <a href="#home" class="story-item">
-        <i class='bx bx-home'></i>
+  <nav class="navbar">
+    <div class="nav-menu">
+      <a href="#home" class="nav-item"> 
+        <i class='bx bx-home'></i> 
         <span>Home</span>
+      </a> 
+      <a href="#about" class="nav-item"> 
+        <i class='bx bx-user'></i> 
+        <span>About</span> 
+      </a> 
+      <a href="#skill" class="nav-item"> 
+        <i class='bx bx-bar-chart-alt-2'></i> 
+        <span>Skills</span> 
+      </a> 
+      <a href="#project" class="nav-item"> 
+        <i class='bx bx-folder'></i> 
+        <span>Projects</span> 
+      </a> 
+      <a href="#resume" class="nav-item"> 
+        <i class='bx bx-file'></i> 
+        <span>Resume</span> 
+      </a> 
+      <a href="#contact" class="nav-item"> 
+        <i class='bx bx-envelope'></i> 
+        <span>Contact</span> 
       </a>
-
-      <a href="./controller/about.html" class="story-item">
-        <i class='bx bx-user'></i>
-        <span>About Me</span>
-      </a>
-
-      <a href="./controller/education.html" class="story-item">
-        <i class='bx bx-book'></i>
-        <span>Education</span>
-      </a>
-
-      <a href="./controller/organization.html" class="story-item">
-        <i class='bx bx-group'></i>
-        <span>Organization</span>
-      </a>
-
-      <a href="./controller/experience.html" class="story-item">
-        <i class='bx bx-briefcase'></i>
-        <span>Experience</span>
-      </a>
-
-      <a href="./controller/skill.html" class="story-item">
-        <i class='bx bx-cog'></i>
-        <span>Skills</span>
-      </a>
-
-      <a href="./controller/project.html" class="story-item">
-        <i class='bx bx-folder'></i>
-        <span>Projects</span>
-      </a>
-
-
-      <a href="./controller/resume.html" class="story-item">
-        <i class='bx bx-file'></i>
-        <span>Resume</span>
-      </a>
-
-      <a href="./controller/faq.html" class="story-item">
-        <i class='bx bx-help-circle'></i>
-        <span>FAQ</span>
-      </a>
-
-      <a href="./controller/contact.html" class="story-item">
-        <i class='bx bx-envelope'></i>
-        <span>Contact</span>
-      </a>
-
+    </div>
+    <div class="nav-item language-toggle">
+      <i class='bx bx-globe'></i>
+      <button id="langToggle">EN</button>
+    </div>
+    <div class="menu-toggle">
+      <i class='bx bx-menu'></i>
     </div>
   </nav>
 
-  <!-- HOME SECTION -->
+  <main>
   <section id="home" class="home">
-    <div class="section-wrapper">
-      <div class="home-content">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search projects, skills...">
+        <button type="button" id="searchBtn">
+          <i class='bx bx-search'></i>
+        </button>
+    </div>
+    <div class="section-home">
+      <div class="content">
+        <div class="content-left">
+          <h1>Hi, I'm <span>Ubaid Dzilhilmi</span></h1>
+          <h3>
+            Industrial Process & Web-Based System Enthusiast
+          </h3>
+          <p>
+            I am a graduate of Agricultural Industrial Technology (TIP) with a strong foundation in
+            management, quality control, product development, and logistics.
+            I use technology and web-based solutions to improve efficiency,
+            optimize processes, and support business decision-making.
+          </p>
+           <div class="index-btn">
+          <a href="#contact">Contact Me</a>
+          <a href="#project">View Projects</a>
+        </div>
+        </div>
+       
+        <div class="content-right">
+            <img src="./public/ubaiddzilhilmi.jpg" alt="Ubaid Dzilhilmi">
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
 
-        <h1>Hi, I'm <span>Ubaid Dzilhilmi</span></h1>
-        <h3>Welcome to My Portfolio Website</h3>
+  <section id="about" class="about">
+    <div class="section-about">
+      <div class="content">
+      <div class="content-right">
+        <h1>Ubaid Dzilhilmi</h1>
+        <h3>
+          Agricultural Industrial Technology Graduate
+        </h3>
 
         <p>
-          I am a graduate of Agricultural Industrial Technology (TIP) with a strong foundation in
-          management, quality control, product development, and logistics.
-          I use technology and web-based solutions to improve efficiency,
-          optimize processes, and support business decision-making.
+            I am an Agricultural Industrial Technology graduate with a focus on process optimization and digital solutions through web development.
+            I have a strong foundation in industrial process analysis, quality management, and supply chain operations, combined with technical skills in HTML, CSS, JavaScript, Node.js, and basic database management.
+            I am particularly interested in developing web-based systems to improve operational efficiency, streamline processes, and support data-driven decision-making in industrial and business environments.
         </p>
-
-        <div class="home-btn">
-          <a href="./controller/contact.html">Contact Me</a>
-          <a href="./controller/about.html">About Me</a>
-          <a href="./controller/project.html">My Projects</a>
         </div>
-
+      </div>
+    </div>
+    <div class="section-about">
+    <div class="content">
+      <div class="content-left">
+        <img src="./public/ubaiddzilhilmi.png" alt="foto wisuda">
+      </div>
+      <div class="content-right">
+        <h1>Education</h1>
+        <h3>University of Darussalam Gontor</h3>
+        
+        <p>
+          <b>Bachelor of Agricultural Industrial Technology (TIP)</b>
+          <br>
+          Managed product promotion and customer engagement to drive sales performance and achieve targets. Demonstrated strong communication, persuasive selling, and customer relationship skills.        
+        </p>
+        
+        <h3>Boarding School of Darussalam Gontor</h3>
+        <p>
+          <b>Senior High School</b>
+          <br>
+          Supported laboratory operations through sample preparation, basic testing, and accurate data recording. Ensured adherence to standard operating procedures (SOP) while demonstrating strong teamwork and attention to detail in a research environment.        
+        </p>
       </div>
     </div>
 
+    <div class="section-about">
+      <div class="content">
+        <div class="content-right">
+        <h1>Experience</h1>
+        <h3>Vasa Indonesia</h3>
+        
+        <p>
+          <b>Sales Promoter (2025)</b>
+          <br>
+          Managed product promotion and customer engagement to drive sales performance and achieve targets. Demonstrated strong communication, persuasive selling, and customer relationship skills.        
+        </p>
+        
+        <h3>PUSLITKOKA (Research Center for Coffee and Cocoa)</h3>
+        <p>
+          <b>Laboratory Assistant Intern (2023)</b>
+          <br>
+          Supported laboratory operations through sample preparation, basic testing, and accurate data recording. Ensured adherence to standard operating procedures (SOP) while demonstrating strong teamwork and attention to detail in a research environment.        
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skill" class="skill">
+    <div class="section-skill">
+      <div class="content">
+
+        <h1>Professional Skills</h1>
+
+        <p class="skill-summary">
+          Graduate of Agricultural Industrial Technology (TIP) with strong competencies in 
+          quality management, supply chain, and product development. 
+          Complemented by technical skills in web development and data processing, 
+          enabling integration between industrial processes and digital solutions.
+        </p>
+
+        <div class="skills-container">
+          <div class="skill-item">
+            <button class="skill-btn">
+              <i class='bx bx-check-shield'></i>
+              Quality Management</button>
+            <div class="skill-content">
+              <ul>
+                <li>Quality Control & Assurance</li>
+                <li>Quality Tools: FMEA, SPC, 7 QC Tools, Root Cause Analysis</li>
+                <li>QMS: ISO 9001, SOP Documentation, Internal Audit</li>
+                <li>Soft Skills: Analytical Thinking, Attention to Detail, Problem Solving</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <button class="skill-btn">
+              <i class='bx bx-package'></i>
+              Supply Chain & Logistics
+            </button>
+            <div class="skill-content">
+              <ul>
+                <li>Supply Chain Planning: Demand Forecasting, Inventory Planning</li>
+                <li>Warehouse: FIFO/FEFO, Stock Opname, Warehouse Operations</li>
+                <li>Inventory Management: EOQ, Safety Stock, Reorder Point</li>
+                <li>Tools: Microsoft Excel, ERP (SAP/Odoo)</li>
+                <li>Soft Skills: Analytical Thinking, Problem Solving, Communication</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <button class="skill-btn">
+              <i class='bx bx-test-tube'></i>
+              Research & Development
+            </button>
+            <div class="skill-content">
+              <ul>
+                <li>R&D Process: Product Development, Reformulation, Experimental Design</li>
+                <li>Analysis: Design of Experiments (DOE), Data Analysis (Excel)</li>
+                <li>Testing: Quality Testing, Shelf Life Analysis, Organoleptic Test</li>
+                <li>Documentation: SOP Development, Research Reporting</li>
+                <li>Soft Skills: Critical Thinking, Creativity, Problem Solving</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <button class="skill-btn">
+              <i class='bx bx-line-chart'></i>
+              Marketing & Business
+            </button>
+            <div class="skill-content">
+              <ul>
+                <li>Market Research: Customer Analysis, Competitor Analysis</li>
+                <li>Content: Copywriting, Content Creation, Storytelling</li>
+                <li>Digital Marketing: Social Media Marketing, Content Strategy, SEO</li>
+                <li>Soft Skills: Creativity, Communication, Persuasion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <button class="skill-btn">
+              <i class='bx bx-code-alt'></i>
+              Frontend Development
+            </button>
+            <div class="skill-content">
+              <ul>
+                <li>HTML, CSS, JavaScript (Responsive Design)</li>
+                <li>DOM Manipulation & Event Handling</li>
+                <li>UI Frameworks: Bootstrap</li>
+                <li>Basic React.js</li>
+                <li>UI/UX Principles (User-Centered Design)</li>
+                <li>Tools: VS Code, Git</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <button class="skill-btn">
+              <i class='bx bx-server'></i>
+              Backend Development 
+            </button>
+            <div class="skill-content">
+              <ul>
+                <li>Node.js (Basic)</li>
+                <li>Express.js (Routing & API)</li>
+                <li>RESTful API Development (Basic)</li>
+                <li>Authentication (Session / Basic Auth)</li>
+                <li>Database Integration (MySQL, PostgreSQL)</li>
+                <li>CRUD Operations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="project" class="project">
+    <div class="section-project">
+      <div class="content">
+        <h1>Projects</h1>
+        <h3>Selected works & ongoing development</h3>
+        <p>
+          Here are several projects I have worked on, with some still under development and available on GitHub.
+        </p>
+      </div>
+
+    <div class="page-body">
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <h4>Ubaid Dzilhilmi Portfolio</h4>
+            <span class="project-badge completed">Completed</span>
+          </div>
+
+          <p class="project-desc">
+            A personal portfolio website built using HTML, CSS, and JavaScript to showcase
+            selected projects, skills, and contact information. This project focuses on
+            responsive layout, clean structure, and basic interactivity, and is deployed
+            using GitHub Pages.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/latihan-24"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://example.com"
+               target="_blank"
+               class="project-link demo">
+              Live Demo
+            </a> 
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h4>Basic in JavaScript</h4>
+            <span class="project-badge completed">Completed</span>
+          </div>
+
+          <p class="project-desc">
+            A collection of basic JavaScript implementations focusing on core concepts such as
+            variables, functions, DOM manipulation, and simple logic building. Built to strengthen
+            fundamental programming skills.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/basicinjavascript"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+
+            <a href="https://example.com"
+               target="_blank"
+               class="project-link demo">
+              Live Demo
+            </a> 
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h4>Production Analysis System</h4>
+            <span class="project-badge ongoing">Ongoing</span>          
+          </div>
+
+          <p class="project-desc">
+            Process mapping and analysis project focusing on identifying inefficiencies
+            and proposing improvements based on operational and quality perspectives.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/latihan-24"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://example.com"
+               target="_blank"
+               class="project-link demo">
+              Live Demo
+            </a> 
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h4>Suit Djawa Game</h4>
+            <span class="project-badge completed">Completed</span>          
+          </div>
+
+          <p class="project-desc">
+            A web-based game inspired by traditional Javanese rock–paper–scissors mechanics. This project demonstrates core front-end development skills, including DOM manipulation, event handling, game logic implementation, and clean UI design using HTML, CSS, and vanilla JavaScript.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/latihan-24"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://example.com"
+               target="_blank"
+               class="project-link demo">
+              Live Demo
+            </a> 
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h4>Point of Sales</h4>
+            <span class="project-badge ongoing">Ongoing</span>          
+          </div>
+
+          <p class="project-desc">
+            A web-based Point of Sales (POS) application for managing bread distribution to sales members. Built with HTML, CSS, JavaScript, Node.js, Express.js, and MySQL, featuring product listing, member transactions, and basic sales records. Demonstrates full-stack development, database integration, and version control using Git.          
+          </p>
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/latihan-24"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://example.com"
+               target="_blank"
+               class="project-link demo">
+              Live Demo
+            </a> 
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h4>My Gudang</h4>
+            <span class="project-badge ongoing">Ongoing</span>          
+          </div>
+          <p class="project-desc">
+            A warehouse management system prototype designed to manage inventory, stock movement, and basic reporting. This project focuses on improving stock tracking accuracy and warehouse efficiency through a simple web-based system.          
+        </p>
+          <div class="project-actions">
+            <a href="https://github.com/dzilhilmiid/latihan-24"
+               target="_blank"
+               class="project-link">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://example.com"
+               target="_blank"
+               class="project-link demo">
+              Live Demo
+            </a> 
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- JS -->
-  <script src="./js/main.js"></script>
+  <section id="resume" class="resume">
+    <div class="section-wrapper">
+      <div class="content">
 
+        <h1>My Resume</h1>
+        <h3>
+          View or Download My Resume
+        </h3>
+        <p>
+          You can view my complete resume below or download it for more details about my education, skills, and experience.
+        </p>
+        
+        <div class="resume-wrapper">
+          <div class="home-btn">
+            <a href="#" id="viewBtn">
+              <i class='bx bx-show'></i>
+              View Resume
+            </a>
+            <a href="./source/Ubaid_Dzilhilmi_Resume.pdf" target="_blank">
+              <i class='bx bx-download'></i>
+              Download Resume
+            </a>
+          </div>
+          <div class="cv-frame" id="cvFrame">
+            <iframe src="./source/Ubaid_Dzilhilmi_Resume.pdf"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">  <div class="contact-content">    
+    <header class="contact-header">
+      <h1>Contact Me</h1>
+      <h3>For business and collaboration inquiries</h3>
+    </header>
+      
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <input type="tel" name="phone" placeholder="Your Phone Number">
+
+        <textarea name="message" placeholder="Message" required></textarea>
+        
+        <div class="contact-actions">
+          <a href="../index.html" class="btn-back">
+            <i class='bx bx-home'></i>
+          </a>
+          
+          <button type="submit" class="btn-send">
+            <i class="bx bx-send"></i>
+          </button>
+        </div>
+        
+        <p class="form-status" style="display:none;"></p>
+      </form>
+  </section>
+
+  <script src="./js/main.js"></script>
 </body>
+
+<footer>
+  <div class="footer-left">
+    <h2>Ubaid Dzilhilmi</h2>
+    <p>Thank you for visiting</p>
+    <p>
+      Tembokrejo Village, Gumukmas District, Jember Regency,
+      East Java, Indonesia
+    </p>
+    <div class="footer-map">
+      <iframe 
+        src="https://www.google.com/maps?q=Jember,+East+Java&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <h3>Contact Me</h3>
+    <address>
+      <a href="mailto:ubaiddzilhilmi@gmail.com">
+        <i class='bx bxl-gmail'></i>
+        <span>ubaiddzilhilmi@gmail.com</span>
+      </a>
+
+      <a href="https://wa.me/6285850496960" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-whatsapp'></i>
+        <span>+62 858-5049-6960</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/ubaid-dzilhilmi-8a41052b5/" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-linkedin'></i>
+        <span>Ubaid Dzilhilmi</span>
+      </a>
+
+      <a href="https://github.com/dzilhilmiid" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-github'></i>
+        <span>dzilhilmiid</span>
+      </a>
+
+      <a href="https://instagram.com/dzilhilmi.id" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-instagram'></i>
+        <span>@dzilhilmi.id</span>
+      </a>
+    </address>
+  </div>
+</footer>
 </html>
