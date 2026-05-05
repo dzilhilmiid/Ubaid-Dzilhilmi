@@ -50,6 +50,17 @@ skillItems.forEach(item => {
   });
 });
 
+// Project
+function scrollProjects(direction) {
+  const container = document.getElementById('projectsGrid');
+  const scrollAmount = 320; // sesuai lebar card
+
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
 // Resume
 document.addEventListener("DOMContentLoaded", function () {
   const viewBtn = document.getElementById("viewBtn");
