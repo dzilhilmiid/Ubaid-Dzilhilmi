@@ -65,11 +65,13 @@ function scrollProjects(direction) {
 document.addEventListener("DOMContentLoaded", function () {
   const viewBtn = document.getElementById("viewBtn");
   const cvFrame = document.getElementById("cvFrame");
+  const content = document.querySelector(".resume-content");
 
   viewBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
     cvFrame.classList.toggle("active");
+    resume-content.classList.toggle("show-resume");
 
     if (cvFrame.classList.contains("active")) {
       viewBtn.innerHTML = "<i class='bx bx-hide'></i> Hide Resume";
