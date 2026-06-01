@@ -648,7 +648,6 @@ section {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  padding: 150px 20px;
   background: linear-gradient(#0087f5, #020617);
 }
 
