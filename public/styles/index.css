@@ -456,7 +456,7 @@ section {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-170%);
   }
 }
 
@@ -477,17 +477,20 @@ section {
 }
 
 .section-project h1 {
+  font-weight: 900;
   font-size: 50px;
   color: var(--primary);
 }
 
 .section-project h3 {
+  font-weight: 900;
   font-size: 22px;
   margin: 5px 0;
   color: var(--white);
 }
 
 .section-project p {
+  font-weight: 600;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 20px;
@@ -507,17 +510,18 @@ section {
 .projects-grid::-webkit-scrollbar {
   display: none;
 }
+
 .projects-grid {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .project-card {
-  min-width: 280px;
+  min-width: 310px;
   max-width: 280px;
   flex-shrink: 0;
 
-  background: rgba(255,255,255,0.03);
+  background: var(--secondary);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 14px;
   padding: 20px;
@@ -529,11 +533,19 @@ section {
   border-color: var(--primary);
 }
 
+.project-image {
+  border: 1px solid var(--white);
+  border-radius: 12px;
+  width: 100%;
+  height: 120px;
+  display: block;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .project-header h4 {
@@ -549,7 +561,7 @@ section {
 }
 
 .project-badge.completed {
-  background: rgba(34,197,94,0.2);
+  background: var(--dark);
   color: var(--secondary);
 }
 
@@ -562,7 +574,23 @@ section {
   background: var(--dark);
   font-size: 14px;
   opacity: 0.9;
-  margin: 10px 0 20px;
+  text-align: justify;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.tech-stack span {
+  background: #89b6f1;
+  color: var(--white);
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .project-actions {
@@ -573,10 +601,11 @@ section {
 
 .project-link {
   text-decoration: none;
+  font-weight: 600;
   font-size: 13px;
   padding: 8px 12px;
   border-radius: 6px;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   color: var(--primary);
   transition: 0.3s;
   display: flex;
@@ -587,23 +616,14 @@ section {
 .project-link:hover {
   background: var(--primary);
   color: var(--white);
-}
-
-.project-link.demo {
-  border-color: var(--secondary);
-  color: var(--secondary);
-}
-
-.project-link.demo:hover {
-  background: var(--secondary);
-  color: var(--white);
+  border: 2px solid var(--white);
 }
 
 .project-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
