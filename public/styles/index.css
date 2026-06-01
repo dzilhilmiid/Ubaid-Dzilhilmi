@@ -22,7 +22,6 @@ html {
 body {
   background: var(--dark);
   color: var(--text);
-  line-height: 1.6;
 }
 
 html, body {
@@ -56,6 +55,7 @@ html, body {
   display: flex;
   gap: 6px;
   align-items: center;
+  font-weight: 700;
   font-size: 14px;
   transition: 0.3s;
 }
@@ -79,6 +79,7 @@ html, body {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 700;
 }
 
 .language-toggle button:hover {
@@ -127,7 +128,7 @@ html, body {
 }
 
 section {
-  padding: 120px 20px;
+  padding: 100px;
 }
 
 /* =============== HOME =============== */
@@ -138,7 +139,6 @@ section {
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient( #0087f5, #020617);
-  padding: 80px;
 }
 
 .section-home {
@@ -150,7 +150,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .section-home .content-left {
@@ -164,6 +164,7 @@ section {
 .section-home .content-left h1 {
   font-size: 50px;
   color: var(--white);
+  font-weight: 900;
 }
 
 .section-home .content-left h1 span {
@@ -174,13 +175,17 @@ section {
   font-size: 25px;
   margin: 5px 0;
   color: var(--white);
+  font-weight: 900;
 }
 
 .section-home .content-left p {
+  background-color: transparent;
   margin-top: 10px;
   padding: 20px;
   border: 2px solid var(--primary);
   border-radius: 10px;
+  font-weight: 600;
+  text-align: justify;
 }
 
 .section-home .content-right img {
@@ -203,8 +208,8 @@ section {
   border: 2px solid var(--secondary);
   border-radius: 8px;
   text-decoration: none;
-  color: var(--primary);
-  background: var(--white);
+  color: var(--white);
+  background: #0064b6;
   transition: 0.3s;
 }
 
@@ -213,21 +218,21 @@ section {
   border: 2px solid var(--primary);
   border-radius: 8px;
   text-decoration: none;
-  color: var(--white);
-  background: var(--secondary);
+  color: #0064b6;
+  background: var(--white);
   transition: 0.3s;
 }
 
 .section-home .index-btn .btn-contact:hover {
   border: 2px solid var(--primary);
-  background: var(--secondary);
-  color: var(--white);
+  background: var(--white);
+  color: #0064b6;
 }
 
 .section-home .index-btn .btn-project:hover {
   border: 2px solid var(--secondary);
-  background: var(--white);
-  color: var(--primary);
+  background: #0064b6;
+  color: var(--white);
 }
 
 /* ================= ABOUT ================= */
@@ -238,7 +243,6 @@ section {
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient(#020617, #0087f5);
-  padding: 100px;
 }
 
 .section-about {
@@ -248,7 +252,7 @@ section {
 
 .section-about .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 50px;
 }
@@ -257,19 +261,19 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  max-width: 1100px;
   font-size: 16px;
 }
 
 .section-about .content-right h1 {
   font-size: 50px;
   color: var(--primary);
+  font-weight: 900;
 }
 
 .section-about .content-right h3 {
   font-size: 25px;
-  margin: 5px 0;
   color: var(--white);
+  font-weight: 900;
 }
 
 .section-about .content-right p {
@@ -277,16 +281,24 @@ section {
   padding: 20px;
   border: 2px solid var(--primary);
   border-radius: 10px;
+  font-weight: 600;
+  text-align: justify;
 }
 
 .section-about .content-left img {
-  width: 360px;
-  height: 460px;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
   margin-top: 20px;
-  object-fit: cover;
   border: 2px solid var(--primary);
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.section-about .content-left img:hover {
+  transform: translateY(-10px);
 }
 
 /* ================ SKILLS =================*/
@@ -306,16 +318,18 @@ section {
 
 .section-skill h1 {
   font-size: 50px;
-  color: var(--primary);
+  color: var(--white);
   text-align: center;
+  font-weight: 900;
 }
 
 .skill-summary {
-  margin: 20px 0 30px;
   padding: 20px;
+  margin: 20px 0;
   border: 2px solid var(--primary);
   border-radius: 10px;
   text-align: center;
+  font-weight: 600;
 }
 
 .skills-container {
@@ -324,6 +338,7 @@ section {
   gap: 20px;
 }
 
+.skill-btn,
 .skill-item {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.1);
@@ -331,6 +346,7 @@ section {
   padding: 10px;
   transition: 0.3s;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .skill-item:hover {
@@ -388,6 +404,62 @@ section {
   opacity: 0.9;
 }
 
+.tools-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tools-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: scrollTools 20s linear infinite;
+}
+
+.tool-card{
+  margin-top: 10px;
+  min-width: 120px;
+  background:var(--primary);
+  border: 1px solid var(--white);
+  border-radius:12px;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.tool-card:hover{
+  transform:translateY(-10px);
+}
+
+.tool-card i{
+  color: white;
+  font-size:50px;
+}
+
+.tool-card img{
+  color: white;
+  width: 47px;
+}
+
+.tool-card span{
+    display:block;
+    font-weight:600;
+}
+
+@keyframes scrollTools {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* ================ PROJECT =================*/
 .project {
   display: flex;
@@ -396,7 +468,6 @@ section {
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient( #020617, #0087f5);
-  padding: 100px;
 }
 
 .section-project {
