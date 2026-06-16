@@ -70,7 +70,7 @@ html, body {
   gap: 20px;
   background: transparent;
   border: 1px solid var(--primary);
-  color: var(--primary);
+  color: var(--white);
   padding: 4px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -1158,4 +1158,7 @@ footer .footer-left p {
     height: 180px;
   }
 
+  .navbar {
+    display: none;
+  }
 }
