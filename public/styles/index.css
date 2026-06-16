@@ -496,7 +496,7 @@ section {
 
 .projects-grid {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   overflow-x: auto;
   scroll-behavior: smooth;
   flex: 1;
@@ -514,8 +514,8 @@ section {
 }
 
 .project-card {
-  min-width: 280px;
-  max-width: 310px;
+  min-width: 250px;
+  max-width: 300px;
   flex-shrink: 0;
 
   background: var(--secondary);
@@ -1129,6 +1129,14 @@ footer .footer-left p {
     padding: 15px;
     font-size: 14px;
   }
+  
+  .nav-menu{
+    gap: 25px;
+  }
+
+  .nav-item{
+    font-size: 20px;
+  }
 
   .search-box input {
     padding: 12px;
@@ -1158,7 +1166,16 @@ footer .footer-left p {
     height: 180px;
   }
 
-  .navbar {
+  .project-card {
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  .footer-left {
     display: none;
+  }
+
+  .footer-right {
+    padding: 0;
   }
 }
