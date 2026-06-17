@@ -924,6 +924,9 @@ footer .footer-left p {
 .footer-right a i {
   font-size: 20px;
   color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  padding: 10px;
 }
 
 .footer-right a:hover {
@@ -1098,8 +1101,16 @@ footer .footer-left p {
     font-size: 18px;
   }
 
-  .contact-actions {
-    grid-template-columns: 1fr;
+   .contact-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .btn-back,
+  .btn-send {
+    width: 100%;
   }
 
   /* Footer */
@@ -1171,6 +1182,11 @@ footer .footer-left p {
     max-width: 250px;
   }
 
+   footer {
+    display: block;
+    padding: 20px;
+  }
+
   .footer-left {
     display: none;
   }
@@ -1178,4 +1194,32 @@ footer .footer-left p {
   .footer-right {
     padding: 0;
   }
+
+  .footer-right h3 {
+    display: none;
+  }
+
+  .footer-right address {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    justify-items: center;
+  }
+
+  .footer-right a {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-right a span {
+    display: none;
+  }
+
+  .footer-right a i {
+    font-size: 20px;
+    padding: 5px;
+  }
+  
 }
