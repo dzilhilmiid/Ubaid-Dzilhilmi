@@ -875,23 +875,20 @@ section {
 
 /* ================= FOOTER ============ */
 footer {
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
   background-color: var(--dark);
   color: var(--white);
-  gap: 50px;
-  padding: 10px 300px;
   font-family: 'Poppins', sans-serif;
 }
 
-.footer-right {
-  padding-left: 200px;
-}
 
 footer .footer-left h2 {
   font-size: 40px;
-  margin-bottom: 10px;
   transition: 0.3s;
 }
 
@@ -901,9 +898,16 @@ footer .footer-left h2:hover {
 
 footer .footer-left p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 2;
   color: var(--white);
   opacity: 0.9;
+}
+
+.footer-right address {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  font-style: normal;
 }
 
 .footer-right h3 {
@@ -917,7 +921,7 @@ footer .footer-left p {
   gap: 10px;
   text-decoration: none;
   color: var(--white);
-  margin-bottom: 12px;
+  margin:0;
   transition: 0.3s ease;
 }
 
@@ -931,7 +935,7 @@ footer .footer-left p {
 
 .footer-right a:hover {
   color: var(--primary);
-  transform: translateX(5px);
+  transform: translateY(-5px);
 }
 
 /* ================= TABLET ================= */
